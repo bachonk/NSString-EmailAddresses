@@ -38,7 +38,6 @@ static const NSString *yahooMailDomain    = @"ymail.com";
 - (NSString *)stringByCorrectingEmailTypos
 {
     if (![self isValidEmailAddress]) {
-        NSLog(@"%@ is not a valid email address.", self);
         return self;
     }
     
@@ -71,12 +70,17 @@ static const NSString *yahooMailDomain    = @"ymail.com";
                             @"yaho.com":        yahooDomain,
                             @"uahoo.com":       yahooDomain,
                             @"ayhoo.com":       yahooDomain,
+                            @"yahoo.cim":       yahooDomain,
+                            @"yahoo.cpm":       yahooDomain,
                             @"ymial.com":       yahooMailDomain,
                             @"ymaill.com":      yahooMailDomain,
                             @"gmal.com":        gmailDomain,
                             @"gnail.com":       gmailDomain,
                             @"gmaill.com":      gmailDomain,
                             @"gmial.com":       gmailDomain,
+                            @"gmali.com":       gmailDomain,
+                            @"gmail.cim":       gmailDomain,
+                            @"gmail.cpm":       gmailDomain
                             };
     
     [typos enumerateKeysAndObjectsUsingBlock:^(id key, id object, BOOL *stop) {
